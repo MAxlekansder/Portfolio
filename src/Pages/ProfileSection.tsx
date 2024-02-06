@@ -9,7 +9,7 @@ class ProfileSection extends React.Component {
       <section id="profile">
         <div className="section_pic-container">
           <img src={Test2Image} alt="Alexander profile picture" className="round-border" /> {/* Use curly braces to include the variable */}
-          <div className="section_text">
+          <div className="section_text"> 
             <p className="section_text_p1">hello i'm</p>
             <h1 className="title">Alexander Hasslund</h1>
             <p className="section_text_p2">Backend developer</p>
