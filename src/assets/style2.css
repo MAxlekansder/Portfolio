@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+*:focus {
+  outline: none;
+}
 
 * {
     padding: 0;
@@ -309,7 +312,7 @@ section {
     font-size: 60px;
     font-weight: 600;
     color: white;
-    margin-top: 150px;
+    margin-top: 350px;
   }
 
   .text-p {
@@ -340,8 +343,13 @@ section {
 
   .tab-content {
     color: #ffff;
+    display: none;
   }
-
+  
+  .active-tab {
+    display: block; /* Show active tab content */
+  }
+  
   .exp-container { 
     display: flex;
     list-style: none;
