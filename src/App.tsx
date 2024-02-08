@@ -7,8 +7,8 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Header />
-      <ProfileSection/>
-      <AboutSection/>
+      <ProfileSection />
+      <AboutSection />
       {/* Add other components and content here */}
     </div>
   );

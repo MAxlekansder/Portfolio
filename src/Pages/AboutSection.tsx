@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import '../assets/style2.css';
 import MountainPhoto from '../assets/Mountain2.jpg';
-import MountainPhoto2 from '../assets/Mountain1.jpg';
-import WebsitePortfolio from '../assets/websitePortfolio.jpg'
+// import MountainPhoto2 from '../assets/Mountain1.jpg';
+import MountainPhoto3 from '../assets/mountain3.jpg';
+import MountainPhoto4 from '../assets/mountain4.jpg';
 
 const AboutSection: React.FC = () => {
     const [activeTab, setActiveTab] = useState('skills');
@@ -17,18 +18,70 @@ const AboutSection: React.FC = () => {
             case 'skills':
                 return MountainPhoto;
             case 'experience':
-                return MountainPhoto2;
+                return MountainPhoto3;
+            case 'education':
+                return MountainPhoto4;
             default:
-                return WebsitePortfolio;
+                return MountainPhoto4;
         }
     };
+
+
+    const getTextForTab = () => {
+        switch (activeTab) {
+            case 'skills':
+                return;
+            case 'experience':
+                return;
+            case 'education':
+                return;
+            default:
+                return "som ding wong";
+        }
+    };
+
+    const skillText = () => {
+        return (
+            <ul>
+                <div className="exp-container">
+                    <div className="back-titles">
+                        <h3 className="h3-titles">Backend Development</h3>
+                        <li><span>Java</span></li>
+                        <li><span>Spring Boot Framework</span></li>
+                        <li><span>SSMS / SSRS</span></li>
+                        <li><span>MongoDB Compass</span></li>
+                        <li><span>Node.js</span></li>
+                        <li><span>MySQL / MariaDB</span></li>
+                        <li><span>Postman</span></li>
+                    </div>
+                    <div className="back-titles">
+                        <h3 className="h3-titles">Frontend Development</h3>
+                        <li><span>Typescript</span></li>
+                        <li><span>Javascript</span></li>
+                        <li><span>HTML / CSS</span></li>
+                        <li><span>React</span></li>
+                        <li><span>Next</span></li>
+                    </div>
+                    <div className="back-titles">
+                        <h3 className="h3-titles">Management Competence</h3>
+                        <li><span>Supply Chain Management</span></li>
+                        <li><span>Microsoft Excel</span></li>
+                        <li><span>Power BI</span></li>
+                        <li><span>Data analysis</span></li>
+                        <li><span>ERP development</span></li>
+                        <li><span>Acceptance testing</span></li>
+                    </div>
+                </div>
+            </ul>
+        );
+    }
 
     return (
         <div id="about">
             <div className="about-container">
                 <div className="row">
                     <div className="about-col-1">
-                        <img src={MountainPhoto} alt="" className="img-container" />
+                        <img src={getImageForTab()} alt="" className="img-container " />
                     </div>
                     <div className="about-col-2">
                         <h1 className="sub-title">About Me</h1>
@@ -81,7 +134,11 @@ const AboutSection: React.FC = () => {
                                 </ul>
                             </div>
                             <div className={`tab-content ${activeTab === 'experience' && 'active-tab'}`} id="experience-content">
-                                test 2
+                                <div className="exp-container">
+                                    <div className="back-titles">
+                                        test test
+                                    </div>
+                                </div>
                             </div>
                             <div className={`tab-content ${activeTab === 'education' && 'active-tab'}`} id="education-content">
                                 test 3
