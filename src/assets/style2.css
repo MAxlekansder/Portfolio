@@ -292,8 +292,10 @@ section {
     z-index: 0;
   }
 
-  
-  
+  .experience-container { 
+    display: flex;
+    width: 80%;
+  }
 
   .row {
     display: flex;
